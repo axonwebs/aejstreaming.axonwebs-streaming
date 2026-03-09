@@ -153,7 +153,7 @@ export const products: Product[] = [
    CONFIGURACIÓN DEL NEGOCIO
    ============================================ */
 
-export const BUSINESS_NAME = "Digital Premium Store";
+export const BUSINESS_NAME = "Streaming Alen";
 export const WHATSAPP_NUMBER = "573175287585";
 export const COMBO_DISCOUNT_PER_ITEM = 2000; // Descuento por cada producto adicional
 

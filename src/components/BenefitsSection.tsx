@@ -11,10 +11,20 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section className="py-20 px-4 bg-secondary/20">
-      <div className="max-w-6xl mx-auto">
+    <section id="beneficios" className="py-24 px-4 relative overflow-hidden">
+      {/* Gold line separator top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute top-1/4 left-0 w-full h-px bg-primary" />
+        <div className="absolute top-2/4 left-0 w-full h-px bg-primary" />
+        <div className="absolute top-3/4 left-0 w-full h-px bg-primary" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
-          className="text-center mb-14"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -36,17 +46,20 @@ const BenefitsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col items-center text-center p-6 rounded-xl border border-border bg-card hover:border-primary/30 transition-colors"
+              className="group flex flex-col items-center text-center p-6 rounded-2xl border border-primary/10 bg-card hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform border border-primary/20">
                 <b.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-display text-base font-semibold mb-2">{b.title}</h3>
-              <p className="text-sm text-muted-foreground font-body">{b.desc}</p>
+              <p className="text-sm text-muted-foreground font-body leading-relaxed">{b.desc}</p>
             </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Gold line separator bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
     </section>
   );
 };
