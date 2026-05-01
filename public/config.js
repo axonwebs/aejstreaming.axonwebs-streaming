@@ -48,7 +48,7 @@ window.AppConfig = {
         {
             id: "disney-premium",
             name: "Disney Premium",
-            price: 12000,
+            price: 15000,
             duration: "1 mes",
             category: "Streaming",
             icon: "✨",
